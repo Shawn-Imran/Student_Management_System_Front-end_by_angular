@@ -1,0 +1,23 @@
+<div class="login-wrapper">
+  <div class="card">
+      <div class="card-body">
+          <form class="form-signin" #loginform="ngForm" (ngSubmit)="loginUser()">
+              <h1 class="h3 mb-3 font-weight-normal">Student's Login Form</h1>
+
+              <small class="text-danger">{{msg}}</small>
+              <label for="inputlogin" class="sr-only">Student ID</label>
+              <input type="text" class="form-control" name="id" placeholder="Enter Your ID" required ngModel
+                  required autofocus [(ngModel)]="user.stid">
+
+              <label for="inputPassword" class="sr-only">Password</label>
+              <input type="password" class="form-control" name="password" placeholder="Enter Your Password" required
+                  autocomplete="on" ngModel required [(ngModel)]="user.password">
+
+              <button class="btn btn-success" type="submit">Login</button>
+
+
+
+          </form>
+      </div>
+  </div>
+</div>

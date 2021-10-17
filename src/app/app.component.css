@@ -1,0 +1,13 @@
+.navbar-custom {
+  background-color: hsla(205, 45%, 30%, 1);;
+}
+.navbar-custom .navbar-brand,
+        .navbar-custom .navbar-text {
+            color: white;
+        }
+.footer {
+  position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+}

@@ -1,0 +1,53 @@
+<div class="reg">
+  <div class="card">
+    <div class="adduser">
+      <h2>Create User</h2>
+    <div [hidden]="submitted">
+      <form (ngSubmit)="onSubmit()">
+        <div class="form-group">
+          <label for="name">Id</label>
+          <input type="text" class="form-control" id="stid" required [(ngModel)]="user.id" name="id">
+        </div>
+        <div class="form-group">
+          <label for="name">Student Id</label>
+          <input type="text" class="form-control" id="stid" required [(ngModel)]="user.stid" name="stid">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Full Name</label>
+          <input type="text" class="form-control" id="name" required [(ngModel)]="user.name" name="name">
+        </div>
+
+        <div class="form-group">
+          <label for="name">Email Id</label>
+          <input type="text" class="form-control" id="email" required [(ngModel)]="user.email" name="email">
+        </div>
+        <div class="form-group">
+          <label for="name">Gender</label>
+          <input type="text" class="form-control" id="gender" required [(ngModel)]="user.gender" name="gender">
+        </div>
+        <div class="form-group">
+          <label for="name">Birthday</label>
+          <input type="text" class="form-control" id="birthday" required [(ngModel)]="user.birthday" name="birthday">
+        </div>
+        <div class="form-group">
+          <label for="name">Password</label>
+          <input type="text" class="form-control" id="password" required [(ngModel)]="user.password" name="password">
+        </div>
+
+        <button type="submit" class="btn btn-success">Submit</button>
+        <br>
+        <br>
+        <button id="back" (click)="list()" class="btn btn-primary">Back</button><br>
+      </form>
+    </div>
+
+    <div [hidden]="!submitted">
+      <h4>You submitted successfully!</h4>
+      <!-- <button class="btn btn-success" (click)="newUser()">Add</button> -->
+    </div>
+
+    </div>
+
+  </div>
+</div>

@@ -1,0 +1,45 @@
+<div class="viewuser">
+  <h2>Employee Details</h2>
+
+  <hr/>
+  <div *ngIf="user">
+
+    <table class="table">
+      <tbody>
+        <tr>
+          <th>Student Id</th>
+          <td>{{user.stid}}</td>
+        </tr>
+        <tr>
+          <th>Name</th>
+          <td>{{user.name}}</td>
+        </tr>
+        <tr>
+          <th>Email</th>
+          <td>{{user.email}}</td>
+        </tr>
+        <tr>
+          <th>Gender</th>
+          <td>{{user.gender}}</td>
+        </tr>
+        <tr>
+          <th>Birthday</th>
+          <td>{{user.birthday}}</td>
+        </tr>
+        <tr>
+          <th>Password</th>
+          <td>{{user.password}}</td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+
+  <br>
+  <br>
+  <button (click)="list()" class="btn btn-primary">Back to Employee List</button><br>
+
+</div>
+
+
+

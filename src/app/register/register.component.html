@@ -1,0 +1,56 @@
+<div class="reg">
+  <div class="card">
+    <div class="hd">
+      <h2 style="text-align:center;"><b>Student's Registration form</b></h2>
+    </div>
+    <form #Registerform="ngForm" (ngSubmit)="registerUser()">
+
+      <div class="form-group">
+        <label for="id">Student ID</label>
+        <input type="text" class="form-control" id="id" placeholder="Enter Your ID" name="stid" required [(ngModel)]="user.stid" #stid="ngModel">
+      </div>
+      <div class="form-group">
+        <label for="name">Full Name:</label>
+        <input type="text" class="form-control" id="fullname" placeholder="Enter Your Full Name" name="name" required [(ngModel)]="user.name" #name="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter Your Email" name="email" required [(ngModel)]="user.email" #email="ngModel">
+      </div>
+
+      <div class="form-group">
+        <label for="gender" class="col-sm-2 control-label">Gender</label>
+        <input type="text" class="form-control" id="gender" placeholder="gender" name="gender" required [(ngModel)]="user.gender" #gender="ngModel">
+          <!-- <option>Male</option>
+          <option>Female</option>
+        </select> -->
+      </div>
+
+      <div class="form-group">
+        <label for="name" style="margin-top:25px">Date of Birth:</label>
+        <input type="text" class="form-control" id="birthdate" placeholder="Enter Your Birth Date" name="birthday" required [(ngModel)]="user.birthday" #birthday="ngModel">
+      </div>
+
+        <!-- <div class="form-group">
+          <label for="photo" class="col">Profile Picture:</label>
+          <input type="file" class="form-control" id="photo"name="photo">
+        </div> -->
+
+      <div class="form-group">
+        <label for="pwd">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password" name="password" required [(ngModel)]="user.password" #password="ngModel">
+      </div>
+
+      <!-- <div class="form-group">
+          <label for="pwd">Confirm Password:</label>
+          <input type="confirm_password" class="form-control" id="confirm_password" placeholder="Confirm password" name="confirm_password" required>
+        </div> -->
+
+      <button type="submit" class="btn btn-success">Submit</button>
+
+    </form>
+
+  </div>
+
+</div>

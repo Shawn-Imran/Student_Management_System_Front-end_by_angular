@@ -1,0 +1,34 @@
+<div class="container">
+  <h2>User List</h2>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Student Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Gender</th>
+        <th>Birthday</th>
+        <th>Password</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of users | async">
+        <td>{{user.id}}</td>
+        <td>{{user.stid}}</td>
+        <td>{{user.name}}</td>
+        <td>{{user.email}}</td>
+        <td>{{user.gender}}</td>
+        <td>{{user.birthday}}</td>
+        <td>{{user.password}}</td>
+        <td>
+          <button type="button" class="btn btn-primary" (click)="goToeditUser(user.id)">Edit</button>&nbsp;&nbsp;
+          <button type="button" class="btn btn-info" (click)="goToviewUser(user.id)">View</button>&nbsp;&nbsp;
+          <button type="button" class="btn btn-danger" (click)="deleteUser(user.id)">Delete</button>&nbsp;&nbsp;
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <button type="button" class="btn btn-success" (click)="goToaddUser()">Add New User</button>
+</div>
